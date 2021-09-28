@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Median of two sorted Array</title>
+</head>
+
+<body>
+    <script>
+        var nums1 = [1, 2];
+        var nums2 = [3, 4];
+
+        var findMedianSortedArrays = function(nums1, nums2) {
+            debugger;
+            var num3 = nums1.concat(nums2);
+            console.log(num3);
+            num3.sort((a, b) => a - b);
+            console.log(num3);
+            var size = num3.length;
+            var median, result;
+            if ((size % 2) == 1) {
+
+                if (size > 1) {
+                    median = Math.floor(size / 2);
+                    result = parseFloat(num3[median]);
+                    return result;
+
+                } else if (size == 1) {
+                    median = parseFloat([size - 1]);
+                    result = parseFloat(num3[median]);
+                    return result;
+
+                }
+            } else {
+                median = size / 2;
+                result = parseFloat((num3[median] + num3[median - 1]) / 2);
+                return result;
+            }
+
+        };
+        console.log(findMedianSortedArrays(nums1, nums2));
+    </script>
+
+</body>
+
+</html>

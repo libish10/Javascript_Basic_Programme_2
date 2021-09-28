@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+
+<body>
+    <script>
+        var number = parseInt(prompt("Enter a number : "));
+        var num1, num2, num3;
+        num1 = 0;
+        num2 = 1;
+        console.log(num1 + "\n" + num2)
+        for (i = 2; i < (number); i++) {
+
+            num3 = num1 + num2;
+            console.log(num3 + "\n");
+            num1 = num2;
+            num2 = num3;
+        }
+    </script>
+</body>
+
+</html>

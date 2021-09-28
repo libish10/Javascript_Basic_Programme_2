@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range of the Armstrong Number</title>
+</head>
+
+<body>
+    <script>
+        var minRange = parseInt(prompt("enter the positive minimum value"));
+        var maxRange = parseInt(prompt("enter a positive maximum value"));
+        if (maxRange > minRange) {
+            for (let i = minRange; i <= maxRange; i++) {
+                let temp;
+                let remainder, answer = 0;
+                temp = i
+                while (temp > 0) {
+                    remainder = temp % 10;
+                    answer += (Math.pow(remainder, 3));
+                    temp = parseInt(temp / 10);
+                }
+                if (i == answer) {
+                    console.log(i);
+                }
+
+            }
+        } else {
+            console.log(`Not  able to find the correct answer`)
+        }
+    </script>
+</body>
+
+</html>

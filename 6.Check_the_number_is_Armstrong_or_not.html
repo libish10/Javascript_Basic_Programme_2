@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Check the number is Armstrong number or not
+    </title>
+</head>
+
+<body>
+    <script>
+        var number = parseInt(prompt("Enter a positive number"));
+        var temp;
+        temp = number;
+        var remainder, answer = 0;
+        while (temp > 0) {
+            remainder = temp % 10;
+            answer += (Math.pow(remainder, 3));
+            temp = parseInt(temp / 10);
+        }
+        console.log(answer == number ? `${number} is a Armstrong Number` : `${number} is not a Armstrong Number`);
+    </script>
+</body>
+
+</html>

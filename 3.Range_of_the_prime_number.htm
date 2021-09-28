@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Certain Range of the prime number;
+    </title>
+</head>
+
+<body>
+    <script>
+        var number1 = parseInt(prompt("Enter the  positive number with lowest range"));
+        var number2 = parseInt(prompt("Enter the  positive number with highest range"));
+
+        if (number1 < 1 || number2 < 1) {
+            console.log("It is not possible for prime numbers")
+        } else if (number1 === number2) {
+            console.log("Enter the highest and lowest values not equal values");
+        } else {
+            for (let i = number1; i <= number2; i++) {
+                let flag = 0;
+                for (let j = 2; j < i; j++) {
+                    if (i % j == 0) {
+                        flag = 1;
+                        break;
+                    }
+
+
+                }
+
+                if (i > 1 && flag == 0) {
+                    console.log(i + "\n");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

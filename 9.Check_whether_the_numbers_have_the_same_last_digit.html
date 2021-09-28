@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Whether number has the same last digit</title>
+</head>
+
+<body>
+    <script>
+        var num1 = parseInt(prompt("Enter the number"));
+        var num2 = parseInt(prompt("Enter the number"));
+        var num3 = parseInt(prompt("Enter the number"));
+        var lastDigit_num1,
+            lastDigit_num2,
+            lastDigit_num3;
+        lastDigit_num1 = num1 % 10;
+        lastDigit_num2 = num2 % 10;
+        lastDigit_num3 = num3 % 10;
+        console.log((lastDigit_num2 == lastDigit_num1 && lastDigit_num1 == lastDigit_num3) ? `${num1} ,${num2} ,${num3} have same last digit` :
+            `${num1}, ${num2}, ${num3} doesn't have same last digit`)
+    </script>
+</body>
+
+</html>
